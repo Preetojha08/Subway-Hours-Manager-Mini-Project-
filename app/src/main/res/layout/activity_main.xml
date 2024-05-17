@@ -20,28 +20,16 @@
             android:src="@drawable/subway_logo"/>
 
         <TextView
+            android:id="@+id/hours_detail_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/hours_detail_tv"
+            android:layout_below="@+id/user_profile"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_8sdp"
-            android:layout_below="@+id/user_profile"
-            android:text="Hours Details"
-            android:textSize="@dimen/_26sdp"
             android:fontFamily="@font/dr_sugiyama"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/hours_number_tv"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/hours_detail_tv"
-            android:text="30 Hours"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:textSize="@dimen/_18sdp"
-            android:fontFamily="@font/abhaya_libre_extrabold"
-            android:textStyle="bold"/>
+            android:text="Subway Hours Details"
+            android:textSize="@dimen/_26sdp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,17 +39,18 @@
             android:layout_marginTop="@dimen/_15sdp"
             android:padding="@dimen/_5sdp"
             android:gravity="center"
-            android:layout_below="@id/hours_number_tv"
+            android:layout_below="@id/hours_detail_tv"
             android:weightSum="3">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="03 Hours (P)"
+                android:text="00 Hours"
+                android:id="@+id/pending_hours_heading"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:textStyle="bold"
                 android:fontFamily="@font/abhaya_libre_extrabold"
-                android:textSize="@dimen/_14sdp"/>
+                android:textSize="@dimen/_15sdp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -70,16 +59,17 @@
                 android:textStyle="bold"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:fontFamily="@font/abhaya_libre_extrabold"
-                android:textSize="@dimen/_12sdp"/>
+                android:textSize="@dimen/_14sdp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="03 Hours (R)"
+                android:text="30 Hours"
                 android:textStyle="bold"
+                android:id="@+id/total_hours_heading"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:fontFamily="@font/abhaya_libre_extrabold"
-                android:textSize="@dimen/_14sdp"/>
+                android:textSize="@dimen/_15sdp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -88,16 +78,17 @@
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:textStyle="bold"
                 android:fontFamily="@font/abhaya_libre_extrabold"
-                android:textSize="@dimen/_12sdp"/>
+                android:textSize="@dimen/_14sdp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="03 Hours(C)"
+                android:text="00 Hours"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:textStyle="bold"
+                android:id="@+id/completed_hours_heading"
                 android:fontFamily="@font/abhaya_libre_extrabold"
-                android:textSize="@dimen/_14sdp"/>
+                android:textSize="@dimen/_15sdp"/>
 
         </LinearLayout>
 
@@ -112,7 +103,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_90sdp"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginVertical="@dimen/_10sdp"
                 android:layout_weight="1.5"
@@ -130,18 +121,15 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/dr_sugiyama"
-                        android:paddingHorizontal="@dimen/_10sdp"
-                        android:layout_alignParentRight="true"
-                        android:gravity="bottom"
+                        android:layout_centerInParent="true"
                         android:alpha="0.3"
-                        android:rotation="-90"
-                        android:text=" Pending "
+                        android:fontFamily="@font/dr_sugiyama"
+                        android:text=" Last Week "
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_41sdp" />
+                        android:textSize="@dimen/_32sdp" />
 
                     <TextView
-                        android:id="@+id/pendingPaymentAmount"
+                        android:id="@+id/lastweekPaymentAmount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
@@ -149,7 +137,7 @@
                         android:gravity="center"
                         android:text="$ 644.00"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_24sdp" />
+                        android:textSize="@dimen/_22sdp" />
 
                 </RelativeLayout>
 
@@ -157,7 +145,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_90sdp"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginVertical="@dimen/_10sdp"
                 android:layout_weight="1.5"
@@ -174,28 +162,24 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
                         android:alpha="0.3"
                         android:fontFamily="@font/dr_sugiyama"
-                        android:gravity="bottom"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentRight="true"
-                        android:paddingHorizontal="@dimen/_10sdp"
-                        android:rotation="-90"
-                        android:text=" Remaining "
+                        android:text="This Week"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_20sdp" />
+                        android:textSize="@dimen/_32sdp" />
 
                     <TextView
-                        android:id="@+id/pendingPaymentAmount"
+                        android:id="@+id/thisweekPaymentAmount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:gravity="center"
-                        android:visibility="invisible"
                         android:fontFamily="@font/abhaya_libre_extrabold"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
                         android:text="$ 644.00"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_24sdp" />
+                        android:textSize="@dimen/_22sdp" />
 
                 </RelativeLayout>
 
@@ -206,7 +190,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_below="@id/cardview_layout"
-            android:layout_height="@dimen/_90sdp"
+            android:layout_height="@dimen/_80sdp"
             android:id="@+id/lastbigcardview"
             android:padding="@dimen/_8sdp"
             android:layout_marginVertical="@dimen/_2sdp"
@@ -221,12 +205,24 @@
                 android:background="@color/mixer">
 
                 <TextView
-                    android:id="@+id/pendingPaymentAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.3"
+                    android:fontFamily="@font/dr_sugiyama"
+                    android:gravity="bottom"
+                    android:layout_centerInParent="true"
+                    android:text=" Biweekly "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_40sdp" />
+
+                <TextView
+                    android:id="@+id/biweeklyPaymentAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:gravity="center"
                     android:fontFamily="@font/abhaya_libre_extrabold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_8sdp"
                     android:text="$ 644.00"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_24sdp" />
@@ -258,6 +254,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="@dimen/_10sdp"
+            android:id="@+id/slotdetailsheadingLayout"
             android:layout_marginTop="@dimen/_5sdp"
             android:weightSum="4"
             android:paddingHorizontal="@dimen/_9sdp"
@@ -267,12 +264,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date"
+                android:layout_marginHorizontal="@dimen/_5sdp"
                 android:layout_weight="1"
                 android:fontFamily="@font/abhaya_libre_extrabold"
-                android:textStyle="bold"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:textSize="@dimen/_15sdp"/>
+                android:text="Date"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -306,6 +303,12 @@
 
         </LinearLayout>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerViewSlotdeatils"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@id/slotdetailsheadingLayout"/>
     </RelativeLayout>
 
 
