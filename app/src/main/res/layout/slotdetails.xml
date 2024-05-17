@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_5sdp"
         android:weightSum="4"
         android:paddingHorizontal="@dimen/_9sdp"
         android:paddingVertical="@dimen/_5sdp">
@@ -18,42 +17,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date"
+            android:id="@+id/slotDetailsDate"
             android:layout_weight="1"
             android:fontFamily="@font/abhaya_libre_medium"
             android:textStyle="bold"
             android:layout_marginHorizontal="@dimen/_5sdp"
-            android:textSize="@dimen/_14sdp"/>
+            android:textSize="@dimen/_12sdp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Day"
+            android:id="@+id/slotDetailsDay"
             android:layout_weight="1"
             android:layout_marginHorizontal="@dimen/_5sdp"
             android:fontFamily="@font/abhaya_libre_medium"
             android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"/>
+            android:textSize="@dimen/_12sdp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Time"
+            android:id="@+id/slotDetailsTime"
             android:layout_weight="1"
             android:layout_marginHorizontal="@dimen/_5sdp"
             android:fontFamily="@font/abhaya_libre_medium"
             android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"/>
+            android:textSize="@dimen/_12sdp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hours"
             android:layout_weight="1"
+            android:id="@+id/slotDetailsHour"
             android:layout_marginHorizontal="@dimen/_5sdp"
             android:fontFamily="@font/abhaya_libre_medium"
             android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"/>
+            android:textSize="@dimen/_12sdp"/>
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
